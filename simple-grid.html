@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap: 1em;
+            grid-column-gap: 1em;
+            grid-auto-rows: minmax(100px, auto);
+            justify-items: start;
+            align-items: start;
+        }
+
+        .grid-container>div {
+            padding: 1em;
+            background-color: grey;
+        }
+
+        .grid-container>div:nth-child(even) {
+            background-color: lawngreen;
+        }
+
+        #div1 {
+            align-self: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div id="div1">dolor sit amet.1</div>
+        <div>dolor sit amet.2 </div>
+        <div>dolor sit amet.3</div>
+        <div>dolor sit amet.4</div>
+        <div>dolor sit amet.5</div>
+    </div>
+</body>
+
+</html>
